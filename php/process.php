@@ -3,11 +3,11 @@
     // Error messages
     $nameEmptyErr = "";
     $emailEmptyErr = "";
-    $educationEmptyErr = "";
-    $genderEmptyErr = "";
-    $hobyEmptyErr = "";
-    $commentEmptyErr = ""; 
+    $checkEmptyErr = "";
+    $messageEmptyErr = ""; 
+    $phoneEmptyErr = ""; 
     $nameErr = "";
+    $phoneErr = "";
     $emailErr = "";
     if(isset($_POST["submit"])) {
         // Set form variables
