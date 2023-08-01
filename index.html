@@ -11,6 +11,7 @@
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
+
 </head>
 
 <body class="position-relative">
@@ -76,10 +77,10 @@
                 </div>
                 <div class="modal-body">
                     <?php include('process.php'); ?>
-                    <form id="contactForm" action="./php/process.php" method="post" novalidate>
+                    <form id="contactForm">
                         <label for="name" class="form-label">Ваше имя</label>
                         <div class="input-group mb-3">
-                            <input name="name" type="text" class="form-control" placeholder="Введите имя"
+                            <input id="name" name="name" type="text" class="form-control" placeholder="Введите имя"
                                 aria-label="Username" aria-describedby="basic-addon1">
                             <!-- Error -->
                             <?php echo $nameEmptyErr; ?>
@@ -88,14 +89,14 @@
                         <label for="phone" class="form-label">Ваш телефон</label>
 
                         <div class="input-group mb-3">
-                            <input type="text" name="phone" class="form-control mask">
+                            <input id="phone" type="text" name="phone" class="form-control">
                             <!-- Error -->
                             <?php echo $phoneEmptyErr; ?>
                             <?php echo $phoneErr; ?>
                         </div>
                         <label for="email" class="form-label">Ваш email</label>
                         <div class="input-group mb-3">
-                            <input name="email" type="text" class="form-control" placeholder="Введите email"
+                            <input id="email" name="email" type="text" class="form-control" placeholder="Введите email"
                                 aria-label="Username">
                             <!-- Error -->
                             <?php echo $emailEmptyErr; ?>
@@ -103,7 +104,7 @@
                         </div>
 
                         <div class="input-group mb-3">
-                            <textarea name="message" class="form-control" aria-label="With textarea"
+                            <textarea id="message" name="message" class="form-control" aria-label="With textarea"
                                 placeholder="Введите Ваше сообщение"></textarea>
                             <div class="help-block with-errors"></div>
                         </div>
@@ -114,7 +115,7 @@
                             <!-- Error -->
                             <?php echo $checkEmptyErr; ?>
                         </div>
-                        <button id="form-submit" type="submit" class="btn btn-secondary">Отправить</button>
+                        <button id="submit" name="submit" type="submit" class="btn btn-secondary">Отправить</button>
                     </form>
                 </div>
             </div>
@@ -164,8 +165,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
     </script>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
-        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./script.js"></script>
 
 </body>

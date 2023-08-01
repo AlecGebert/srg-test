@@ -87,15 +87,11 @@ if(isset($name) && isset($phone) && isset($email) && isset($message)) {
     $data = $name . '-' . $phone . '-' . $email . '-' . $message . "\r\n";
     $ret = file_put_contents('./my-data.txt', $data, FILE_APPEND | LOCK_EX);
     if($ret === false) {
-        echo '<script language="javascript">';
-        echo 'alert("Упс, что-то пошло не так")';
-        echo '</script>';
+        echo "Failed";
         die('Упс, что-то пошло не так');
     }
     else {
-        echo '<script language="javascript">';
-        echo 'alert("Ваше сообшение отправлено!")';
-        echo '</script>';
+        echo "Sent";
     }
 }
 else {
